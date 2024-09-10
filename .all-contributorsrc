@@ -1,5 +1,5 @@
 {
-  "projectName": "saledock",
+  "projectName": "sponi",
   "projectOwner": "hardingadonis",
   "files": [
     "README.md"
@@ -11,5 +11,47 @@
   "linkToUsage": true,
   "skipCi": true,
   "commitType": "docs",
-  "contributors": []
+  "contributors": [
+    {
+      "login": "hardingadonis",
+      "name": "Minh Vương",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34091632?v=4",
+      "profile": "https://github.com/hardingadonis",
+      "contributions": [
+        "code",
+        "maintenance",
+        "review"
+      ]
+    },
+    {
+      "login": "bakaqc",
+      "name": "Quốc Chương",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126387856?v=4",
+      "profile": "https://github.com/bakaqc",
+      "contributions": [
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "htnghia1423",
+      "name": "Thunder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137130942?v=4",
+      "profile": "https://github.com/htnghia1423",
+      "contributions": [
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "yuhtnguyen",
+      "name": "Yuht",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137138731?v=4",
+      "profile": "https://github.com/yuhtnguyen",
+      "contributions": [
+        "test",
+        "review"
+      ]
+    }
+  ]
 }
