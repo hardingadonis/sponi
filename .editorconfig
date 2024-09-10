@@ -1,7 +1,15 @@
-[*.{md,yml}]
+[*]
+indent_style = tab
+indent_size = 2
+
+[*.md]
 indent_style = space
 indent_size = 2
 
-[*.{js,jsx,ts,tsx,json}]
-indent_style = tab
+[*.yml]
+indent_style = space
+indent_size = 2
+
+[.all-contributorsrc]
+indent_style = space
 indent_size = 2
