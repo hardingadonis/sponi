@@ -11,7 +11,7 @@ on:
 jobs:
   if_new_pr:
     name: PR validation
-    if: github.head_ref != 'develop'
+    if: github.head_ref != 'dev'
     runs-on: ubuntu-latest
 
     permissions:
@@ -26,6 +26,6 @@ jobs:
           issue-number: ${{ github.event.number }}
           body: |
             Hi! You've opened a PR to the `main` branch.
-            Please target the `develop` branch for future PRs.
+            Please target the `dev` branch for future PRs.
             Thanks! @${{ github.actor }}
           reactions: confused
