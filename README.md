@@ -1,6 +1,6 @@
 # sponi
 
-[![All Contributors](https://img.shields.io/github/all-contributors/hardingadonis/sponi?color=ee8449&style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/github/all-contributors/hardingadonis/sponi?color=ee8449)](#contributors)
 ![GitHub top language](https://img.shields.io/github/languages/top/hardingadonis/sponi)
 ![GitHub repo size](https://img.shields.io/github/repo-size/hardingadonis/sponi)
 ![GitHub License](https://img.shields.io/github/license/hardingadonis/sponi)
