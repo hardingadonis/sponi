@@ -48,10 +48,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        working-directory: github-page
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist"
+          path: "./github-page/dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
