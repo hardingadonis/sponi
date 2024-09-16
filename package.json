@@ -8,9 +8,9 @@
 	"license": "GPL-3.0 license",
 	"private": true,
 	"scripts": {
-		"prepare": "husky",
+		"postinstall": "husky || true",
 		"format": "prettier --write \"./src/**/*\" \"./App.tsx\"",
-		"test": "echo \"Error: no test specified\" && exit 0"
+		"lint-staged": "lint-staged"
 	},
 	"devDependencies": {
 		"husky": "^9.1.6",

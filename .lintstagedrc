@@ -1,0 +1,5 @@
+{
+	"src/**/*.ts": ["yarn format", "git add ."],
+	"src/**/*.tsx": ["yarn format", "git add ."],
+	"App.tsx": ["yarn format", "git add ."]
+}
