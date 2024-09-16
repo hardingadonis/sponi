@@ -9,10 +9,12 @@
 	"private": true,
 	"scripts": {
 		"prepare": "husky",
+		"format": "prettier --write \"./src/**/*\" \"./App.tsx\"",
 		"test": "echo \"Error: no test specified\" && exit 0"
 	},
 	"devDependencies": {
 		"husky": "^9.1.6",
-		"lint-staged": "^15.2.10"
+		"lint-staged": "^15.2.10",
+		"prettier": "^3.3.3"
 	}
 }
