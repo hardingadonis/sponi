@@ -40,3 +40,5 @@ Conventions:
 - `fix`: Fix a bug, issue, or error, tool scan warning.
 - `docs`: Update or add documentation.
 - `feat`: Add a new feature. (Usually used in the PR title)
+- `refactor`: Refactor an existing code.
+- `delete`: Delete an existing code.

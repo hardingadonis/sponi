@@ -1,5 +1,5 @@
 {
-	"src/**/*.ts": ["yarn format", "git add ."],
-	"src/**/*.tsx": ["yarn format", "git add ."],
-	"App.tsx": ["yarn format", "git add ."]
+	"src/**/*.ts": ["yarn prettier --write \"./src/**/*.ts\""],
+	"src/**/*.tsx": ["yarn prettier --write \"./src/**/*.tsx\""],
+	"App.tsx": ["yarn prettier --write App.tsx"]
 }
