@@ -17,6 +17,7 @@
   - You can download it from [here](https://nodejs.org/en/download/).
 - Package manager: `yarn`
   - To install it, run `npm i -g yarn` after installing Node.js.
+  - Make sure install `yarn v1` - aka `yarn classic`.
 - Code editor: `Visual Studio Code`
   - You can download it from [here](https://code.visualstudio.com/).
 - Dev tools: `Expo Go`
@@ -42,3 +43,13 @@ Conventions:
 - `feat`: Add a new feature. (Usually used in the PR title)
 - `refactor`: Refactor an existing code.
 - `delete`: Delete an existing code.
+
+Examples:
+
+- `add: add a new feature`
+- `update: update a function`
+- `fix: fix a bug`
+- `docs: update contributing guidelines`
+- `feat: add a new feature`
+- `refactor: refactor a function`
+- `delete: delete a function`

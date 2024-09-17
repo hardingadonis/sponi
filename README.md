@@ -12,7 +12,7 @@ Home page: [hardingadonis.github.io/sponi](https://hardingadonis.github.io/sponi
 
 ## Contributing
 
-- See [CONTRIBUTING.md](CONTRIBUTING.md) for more informations.
+- See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for more informations.
 
 ## Contributors
 
