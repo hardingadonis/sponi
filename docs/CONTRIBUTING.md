@@ -8,6 +8,7 @@
     - [Tools](#tools)
     - [Extensions](#extensions)
   - [Commit Conventions](#commit-conventions)
+  - [Development](#development)
 
 ## Requirements
 
@@ -53,3 +54,27 @@ Examples:
 - `feat: add a new feature`
 - `refactor: refactor a function`
 - `delete: delete a function`
+
+> **Note**: Please follow the conventions to keep the commit history clean and easy to read.
+
+## Development
+
+- Step 1: Clone the repository
+
+  ```bash
+  git clone https://github.com/hardingadonis/sponi.git
+  ```
+
+- Step 2: Install dependencies
+
+  ```bash
+  yarn install
+  ```
+
+- Step 3: Start the development server
+
+  ```bash
+  yarn dev
+  ```
+
+- Step 4: Open the project in Expo Go & scan the QR code
