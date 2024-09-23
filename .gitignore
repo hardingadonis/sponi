@@ -131,3 +131,6 @@ dist
 
 # Expo
 .expo/
+
+# Visual Studio Code
+.vscode/

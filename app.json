@@ -2,6 +2,7 @@
 	"expo": {
 		"name": "sponi",
 		"slug": "sponi",
+		"scheme": "sponi",
 		"description": "Keeping your money is our pleasure!",
 		"version": "0.1.0",
 		"owner": "hardingadonis",
