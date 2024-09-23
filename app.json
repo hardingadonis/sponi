@@ -2,7 +2,11 @@
 	"expo": {
 		"name": "sponi",
 		"slug": "sponi",
+		"description": "Keeping your money is our pleasure!",
 		"version": "0.1.0",
+		"owner": "hardingadonis",
+		"privacy": "public",
+		"githubUrl": "https://github.com/hardingadonis/sponi",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
@@ -20,8 +24,13 @@
 				"backgroundColor": "#ffffff"
 			}
 		},
-		"web": {
-			"favicon": "./assets/favicon.png"
-		}
+		"plugins": [
+			[
+				"expo-local-authentication",
+				{
+					"faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+				}
+			]
+		]
 	}
 }
