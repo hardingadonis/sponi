@@ -1,7 +1,7 @@
 export interface Account {
 	id: number;
 	name: string;
-	type: string;
+	type: 'cash' | 'bank';
 	balance: number;
 	icon: string;
 	color: string;
