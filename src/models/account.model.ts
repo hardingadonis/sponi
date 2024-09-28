@@ -7,5 +7,4 @@ export interface Account {
 	color: string;
 	createAt: Date;
 	updateAt: Date;
-	deleteAt: Date;
 }

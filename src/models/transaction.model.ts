@@ -5,4 +5,5 @@ export interface Transaction {
 	description: string;
 	type: 'income' | 'expense' | 'transfer';
 	createAt: Date;
+	updateAt: Date;
 }

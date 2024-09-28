@@ -7,5 +7,4 @@ export interface Category {
 	color: string;
 	createAt: Date;
 	updateAt: Date;
-	deleteAt: Date;
 }
