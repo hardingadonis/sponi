@@ -3,6 +3,6 @@ export interface Transaction {
 	sourceAccountId: number;
 	amount: number;
 	description: string;
-	type: 'income'| 'expense' | 'transfer';
+	type: 'income' | 'expense' | 'transfer';
 	createAt: Date;
 }
