@@ -1,6 +1,5 @@
-import { Transaction } from "./transaction.model";
+import { Transaction } from "@/models/transaction.model";
 
-export interface IncomeDetail extends Transaction {
-	id: number;
+export interface IncomeTransaction extends Transaction {
 	categoryId: number;
 }
