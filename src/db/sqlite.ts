@@ -1,37 +1,16 @@
-import { Asset } from 'expo-asset';
 import * as SQLite from 'expo-sqlite';
-import * as FileSystem from 'expo-file-system';
-import { DATABASE_NAME } from '@/constants/commons';
+import { DATABASE_NAME } from '@/constants/sql/commons';
+import { CREATE_TABLES_SQLITE } from '@/constants/sql/init.sql';
 
-const db = SQLite.openDatabaseSync(DATABASE_NAME);
+// --------------------------------------------------
 
 export const loadDatabase = async () => {
-	const dbName = DATABASE_NAME;
-	const dbUri = Asset.fromModule(require('@/assets/sponi.database.db')).uri;
-	const dbFilePath = `${FileSystem.documentDirectory}database/${dbName}`;
+	const db = await SQLite.openDatabaseSync(DATABASE_NAME);
 
-	const fileInfo = await FileSystem.getInfoAsync(dbFilePath);
+	console.info('Database loaded');
 
-	console.debug('Database file info:', fileInfo);
-	console.debug('Database file path:', dbFilePath);
-	console.debug('Database file uri:', dbUri);
+	// Create tables if not exists
+	await db.execAsync(CREATE_TABLES_SQLITE);
 
-	if (!fileInfo.exists) {
-		// Create directory if not exists
-		await FileSystem.makeDirectoryAsync(
-			`${FileSystem.documentDirectory}database/`,
-			{
-				intermediates: true,
-			},
-		);
-
-		console.debug('Database file not found, copying from assets...');
-
-		// Copy database file from assets to document directory
-		await FileSystem.downloadAsync(dbUri, dbFilePath);
-
-		console.debug('Database file copied successfully!');
-	}
+	console.info('Tables created if not exists');
 };
-
-export default db;
