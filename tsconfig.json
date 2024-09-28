@@ -20,6 +20,10 @@
 		"noPropertyAccessFromIndexSignature": true,
 		"allowUnusedLabels": true,
 		"allowUnreachableCode": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"]
+		}
 	}
 }
