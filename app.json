@@ -42,6 +42,12 @@
 						"newArchEnabled": true
 					}
 				}
+			],
+			[
+				"expo-router",
+				{
+					"root": "./src/app"
+				}
 			]
 		]
 	}
