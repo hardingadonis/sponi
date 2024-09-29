@@ -47,3 +47,4 @@ Home page: [hardingadonis.github.io/sponi](https://hardingadonis.github.io/sponi
 ## Licenses
 
 - [sponi](https://github.com/hardingadonis/sponi) is licensed under the [GPL-3.0 license](LICENSE)
+- [icon](assets/) is under the [flaticon](https://www.flaticon.com/free-icon/rabbit_9200240).
