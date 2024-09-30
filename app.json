@@ -48,7 +48,8 @@
 				{
 					"root": "./src/app"
 				}
-			]
+			],
+			["expo-localization"]
 		]
 	}
 }
