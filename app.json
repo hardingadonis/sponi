@@ -31,25 +31,7 @@
 				{
 					"faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
 				}
-			],
-			[
-				"expo-build-properties",
-				{
-					"ios": {
-						"newArchEnabled": true
-					},
-					"android": {
-						"newArchEnabled": true
-					}
-				}
-			],
-			[
-				"expo-router",
-				{
-					"root": "./src/app"
-				}
-			],
-			["expo-localization"]
+			]
 		]
 	}
 }
