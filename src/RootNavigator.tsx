@@ -1,29 +1,15 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Text, View } from 'react-native';
 
-const Drawer = createDrawerNavigator();
+import DrawerContent from '@/navigation/DrawerContent';
+import HomeScreen from '@/screens/HomeScreen';
 
-function DrawerContent() {
-	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Drawer content</Text>
-		</View>
-	);
-}
-
-function HomeScreen() {
-	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Home Screen</Text>
-		</View>
-	);
-}
+const RNDrawer = createDrawerNavigator();
 
 const RootNavigator = () => {
 	return (
-		<Drawer.Navigator drawerContent={() => <DrawerContent />}>
-			<Drawer.Screen name="Home" component={HomeScreen} />
-		</Drawer.Navigator>
+		<RNDrawer.Navigator drawerContent={() => <DrawerContent />}>
+			<RNDrawer.Screen name="Home" component={HomeScreen} />
+		</RNDrawer.Navigator>
 	);
 };
 
