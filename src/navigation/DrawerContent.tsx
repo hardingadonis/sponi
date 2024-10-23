@@ -1,17 +1,9 @@
-import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
+import { Ionicons } from '@expo/vector-icons';
+import { DrawerContentScrollView } from '@react-navigation/drawer';
 import * as Application from 'expo-application';
 import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import {
-	Avatar,
-	Caption,
-	Drawer,
-	Paragraph,
-	Switch,
-	Text,
-	Title,
-	TouchableRipple,
-} from 'react-native-paper';
+import { Avatar, Drawer, Text, Title } from 'react-native-paper';
 
 const DrawerContent = () => {
 	const [active, setActive] = useState('');
@@ -37,7 +29,9 @@ const DrawerContent = () => {
 			</View>
 			<Drawer.Section style={styles.drawerSection}>
 				<Drawer.Item
-					icon="home"
+					icon={({ color, size }) => (
+						<Ionicons name="home-outline" size={size} color={color} />
+					)}
 					label="Home"
 					active={active == 'home'}
 					onPress={() => {
@@ -45,7 +39,9 @@ const DrawerContent = () => {
 					}}
 				/>
 				<Drawer.Item
-					icon="car"
+					icon={({ color, size }) => (
+						<Ionicons name="wallet-outline" size={size} color={color} />
+					)}
 					label="Accounts"
 					active={active == 'accounts'}
 					onPress={() => {
@@ -53,7 +49,9 @@ const DrawerContent = () => {
 					}}
 				/>
 				<Drawer.Item
-					icon="laptop"
+					icon={({ color, size }) => (
+						<Ionicons name="pricetags-outline" size={size} color={color} />
+					)}
 					label="Categories"
 					active={active == 'categories'}
 					onPress={() => {
@@ -61,7 +59,9 @@ const DrawerContent = () => {
 					}}
 				/>
 				<Drawer.Item
-					icon="laptop"
+					icon={({ color, size }) => (
+						<Ionicons name="cash-outline" size={size} color={color} />
+					)}
 					label="Transactions"
 					active={active == 'transactions'}
 					onPress={() => {
@@ -69,7 +69,9 @@ const DrawerContent = () => {
 					}}
 				/>
 				<Drawer.Item
-					icon="laptop"
+					icon={({ color, size }) => (
+						<Ionicons name="bar-chart-outline" size={size} color={color} />
+					)}
 					label="Overview"
 					active={active == 'overview'}
 					onPress={() => {
@@ -79,7 +81,9 @@ const DrawerContent = () => {
 			</Drawer.Section>
 			<Drawer.Section>
 				<Drawer.Item
-					icon="account"
+					icon={({ color, size }) => (
+						<Ionicons name="settings-outline" size={size} color={color} />
+					)}
 					label="Settings"
 					active={active == 'settings'}
 					onPress={() => {
