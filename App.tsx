@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { PaperProvider } from 'react-native-paper';
 
 import Main from '@/Main';
@@ -5,7 +6,9 @@ import Main from '@/Main';
 const App = () => {
 	return (
 		<PaperProvider>
-			<Main />
+			<NavigationContainer>
+				<Main />
+			</NavigationContainer>
 		</PaperProvider>
 	);
 };
