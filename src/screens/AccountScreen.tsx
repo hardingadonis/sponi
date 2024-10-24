@@ -1,12 +1,7 @@
-import { View } from 'react-native';
-import { Text } from 'react-native-paper';
+import AccountNavigator from '@/navigation/accounts/AccountNavigator';
 
 const AccountScreen = () => {
-	return (
-		<View>
-			<Text>Account Screen</Text>
-		</View>
-	);
+	return <AccountNavigator />;
 };
 
 export default AccountScreen;
