@@ -30,7 +30,11 @@ const DrawerContent = () => {
 			<Drawer.Section style={styles.drawerSection}>
 				<Drawer.Item
 					icon={({ color, size }) => (
-						<Ionicons name="home-outline" size={size} color={color} />
+						<Ionicons
+							name={active == 'home' ? 'home' : 'home-outline'}
+							size={size}
+							color={color}
+						/>
 					)}
 					label="Home"
 					active={active == 'home'}
@@ -40,7 +44,11 @@ const DrawerContent = () => {
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
-						<Ionicons name="wallet-outline" size={size} color={color} />
+						<Ionicons
+							name={active == 'accounts' ? 'wallet' : 'wallet-outline'}
+							size={size}
+							color={color}
+						/>
 					)}
 					label="Accounts"
 					active={active == 'accounts'}
@@ -50,7 +58,11 @@ const DrawerContent = () => {
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
-						<Ionicons name="pricetags-outline" size={size} color={color} />
+						<Ionicons
+							name={active == 'categories' ? 'pricetags' : 'pricetags-outline'}
+							size={size}
+							color={color}
+						/>
 					)}
 					label="Categories"
 					active={active == 'categories'}
@@ -60,7 +72,11 @@ const DrawerContent = () => {
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
-						<Ionicons name="cash-outline" size={size} color={color} />
+						<Ionicons
+							name={active == 'transactions' ? 'cash' : 'cash-outline'}
+							size={size}
+							color={color}
+						/>
 					)}
 					label="Transactions"
 					active={active == 'transactions'}
@@ -70,7 +86,11 @@ const DrawerContent = () => {
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
-						<Ionicons name="bar-chart-outline" size={size} color={color} />
+						<Ionicons
+							name={active == 'overview' ? 'bar-chart' : 'bar-chart-outline'}
+							size={size}
+							color={color}
+						/>
 					)}
 					label="Overview"
 					active={active == 'overview'}
@@ -82,7 +102,11 @@ const DrawerContent = () => {
 			<Drawer.Section>
 				<Drawer.Item
 					icon={({ color, size }) => (
-						<Ionicons name="settings-outline" size={size} color={color} />
+						<Ionicons
+							name={active == 'settings' ? 'settings' : 'settings-outline'}
+							size={size}
+							color={color}
+						/>
 					)}
 					label="Settings"
 					active={active == 'settings'}
