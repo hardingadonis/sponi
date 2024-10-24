@@ -1,12 +1,15 @@
 import { Ionicons } from '@expo/vector-icons';
-import { DrawerContentScrollView } from '@react-navigation/drawer';
+import {
+	DrawerContentComponentProps,
+	DrawerContentScrollView,
+} from '@react-navigation/drawer';
 import * as Application from 'expo-application';
 import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Avatar, Drawer, Text, Title } from 'react-native-paper';
 
-const DrawerContent = () => {
-	const [active, setActive] = useState('');
+const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
+	const [active, setActive] = useState('home');
 	const [appName, setAppName] = useState('');
 	const [appVersion, setAppVersion] = useState('');
 
@@ -40,6 +43,7 @@ const DrawerContent = () => {
 					active={active == 'home'}
 					onPress={() => {
 						setActive('home');
+						navigation.navigate('HomeScreen');
 					}}
 				/>
 				<Drawer.Item
@@ -54,6 +58,7 @@ const DrawerContent = () => {
 					active={active == 'accounts'}
 					onPress={() => {
 						setActive('accounts');
+						navigation.navigate('AccountScreen');
 					}}
 				/>
 				<Drawer.Item
@@ -68,6 +73,7 @@ const DrawerContent = () => {
 					active={active == 'categories'}
 					onPress={() => {
 						setActive('categories');
+						navigation.navigate('CategoryScreen');
 					}}
 				/>
 				<Drawer.Item
@@ -82,6 +88,7 @@ const DrawerContent = () => {
 					active={active == 'transactions'}
 					onPress={() => {
 						setActive('transactions');
+						navigation.navigate('TransactionScreen');
 					}}
 				/>
 				<Drawer.Item
@@ -96,6 +103,7 @@ const DrawerContent = () => {
 					active={active == 'overview'}
 					onPress={() => {
 						setActive('overview');
+						navigation.navigate('OverviewScreen');
 					}}
 				/>
 			</Drawer.Section>
@@ -112,6 +120,7 @@ const DrawerContent = () => {
 					active={active == 'settings'}
 					onPress={() => {
 						setActive('settings');
+						navigation.navigate('SettingsScreen');
 					}}
 				/>
 			</Drawer.Section>
