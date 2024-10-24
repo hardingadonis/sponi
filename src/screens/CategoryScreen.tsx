@@ -1,12 +1,7 @@
-import { View } from 'react-native';
-import { Text } from 'react-native-paper';
+import CategoryNavigator from '@/navigation/categories/CategoryNavigator';
 
 const CategoryScreen = () => {
-	return (
-		<View>
-			<Text>Category Screen</Text>
-		</View>
-	);
+	return <CategoryNavigator />;
 };
 
 export default CategoryScreen;
