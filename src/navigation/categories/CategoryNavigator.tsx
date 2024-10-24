@@ -1,8 +1,8 @@
-import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
 import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
+import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 import CategoryExpenseScreen from '@/screens/categories/CategoryExpenseScreen';
 import CategoryIncomeScreen from '@/screens/categories/CategoryIncomeScreen';
 
@@ -19,13 +19,12 @@ const CategoryNavigator = () => {
 				component={CategoryIncomeScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'trending-up-outline' : 'trending-up'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'trending-up',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Income',
 				}}
@@ -35,13 +34,12 @@ const CategoryNavigator = () => {
 				component={CategoryExpenseScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'trending-down-outline' : 'trending-down'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'trending-down',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Expense',
 				}}

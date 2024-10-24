@@ -1,8 +1,8 @@
-import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
 import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
+import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 import AccountBankScreen from '@/screens/accounts/AccountBankScreen';
 import AccountCashScreen from '@/screens/accounts/AccountCashScreen';
 
@@ -19,13 +19,12 @@ const AccountNavigator = () => {
 				component={AccountCashScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'wallet-outline' : 'wallet'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'wallet',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Cash',
 				}}
@@ -35,13 +34,12 @@ const AccountNavigator = () => {
 				component={AccountBankScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'card-outline' : 'card'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'card',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Bank',
 				}}

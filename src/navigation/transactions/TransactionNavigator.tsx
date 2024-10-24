@@ -1,8 +1,8 @@
-import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
 import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
+import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 import TransactionIncomeScreen from '@/screens/transactions/CategoryIncomeScreen';
 import TransactionExpenseScreen from '@/screens/transactions/TransactionExpenseScreen';
 import TransactionTransferScreen from '@/screens/transactions/TransactionTransferScreen';
@@ -20,13 +20,12 @@ const TransactionNavigator = () => {
 				component={TransactionIncomeScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'trending-up-outline' : 'trending-up'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'trending-up',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Income',
 				}}
@@ -36,13 +35,12 @@ const TransactionNavigator = () => {
 				component={TransactionExpenseScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'trending-down-outline' : 'trending-down'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'trending-down',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Expense',
 				}}
@@ -52,13 +50,12 @@ const TransactionNavigator = () => {
 				component={TransactionTransferScreen}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => {
-						return (
-							<Ionicons
-								name={!focused ? 'repeat-outline' : 'repeat'}
-								size={size}
-								color={color}
-							/>
-						);
+						return CommonSetIcon({
+							isFocus: focused,
+							iconName: 'repeat',
+							size,
+							color,
+						});
 					},
 					tabBarLabel: 'Transfer',
 				}}
