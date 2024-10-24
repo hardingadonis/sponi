@@ -1,4 +1,3 @@
-import { Ionicons } from '@expo/vector-icons';
 import {
 	DrawerContentComponentProps,
 	DrawerContentScrollView,
@@ -9,6 +8,7 @@ import { StyleSheet, View } from 'react-native';
 import { Avatar, Caption, Drawer, Text, Title } from 'react-native-paper';
 
 import NavigiationId from '@/navigation/NavigationId';
+import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 
 const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 	const [active, setActive] = useState(NavigiationId.HOME);
@@ -37,13 +37,14 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 			</Caption>
 			<Drawer.Section>
 				<Drawer.Item
-					icon={({ color, size }) => (
-						<Ionicons
-							name={active == NavigiationId.HOME ? 'home' : 'home-outline'}
-							size={size}
-							color={color}
-						/>
-					)}
+					icon={({ color, size }) =>
+						CommonSetIcon({
+							isFocus: active == NavigiationId.HOME,
+							iconName: 'home',
+							size: size,
+							color: color,
+						})
+					}
 					label="Home"
 					active={active == NavigiationId.HOME}
 					onPress={() => {
@@ -52,15 +53,14 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 					}}
 				/>
 				<Drawer.Item
-					icon={({ color, size }) => (
-						<Ionicons
-							name={
-								active == NavigiationId.ACCOUNT ? 'wallet' : 'wallet-outline'
-							}
-							size={size}
-							color={color}
-						/>
-					)}
+					icon={({ color, size }) =>
+						CommonSetIcon({
+							isFocus: active == NavigiationId.ACCOUNT,
+							iconName: 'wallet',
+							size: size,
+							color: color,
+						})
+					}
 					label="Accounts"
 					active={active == NavigiationId.ACCOUNT}
 					onPress={() => {
@@ -69,17 +69,14 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 					}}
 				/>
 				<Drawer.Item
-					icon={({ color, size }) => (
-						<Ionicons
-							name={
-								active == NavigiationId.CATEGORY
-									? 'pricetags'
-									: 'pricetags-outline'
-							}
-							size={size}
-							color={color}
-						/>
-					)}
+					icon={({ color, size }) =>
+						CommonSetIcon({
+							isFocus: active == NavigiationId.CATEGORY,
+							iconName: 'pricetags',
+							size: size,
+							color: color,
+						})
+					}
 					label="Categories"
 					active={active == NavigiationId.CATEGORY}
 					onPress={() => {
@@ -88,15 +85,14 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 					}}
 				/>
 				<Drawer.Item
-					icon={({ color, size }) => (
-						<Ionicons
-							name={
-								active == NavigiationId.TRANSACTION ? 'cash' : 'cash-outline'
-							}
-							size={size}
-							color={color}
-						/>
-					)}
+					icon={({ color, size }) =>
+						CommonSetIcon({
+							isFocus: active == NavigiationId.TRANSACTION,
+							iconName: 'cash',
+							size: size,
+							color: color,
+						})
+					}
 					label="Transactions"
 					active={active == NavigiationId.TRANSACTION}
 					onPress={() => {
@@ -105,17 +101,14 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 					}}
 				/>
 				<Drawer.Item
-					icon={({ color, size }) => (
-						<Ionicons
-							name={
-								active == NavigiationId.OVERVIEW
-									? 'bar-chart'
-									: 'bar-chart-outline'
-							}
-							size={size}
-							color={color}
-						/>
-					)}
+					icon={({ color, size }) =>
+						CommonSetIcon({
+							isFocus: active == NavigiationId.OVERVIEW,
+							iconName: 'bar-chart',
+							size: size,
+							color: color,
+						})
+					}
 					label="Overview"
 					active={active == NavigiationId.OVERVIEW}
 					onPress={() => {
@@ -126,17 +119,14 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 			</Drawer.Section>
 			<Drawer.Section>
 				<Drawer.Item
-					icon={({ color, size }) => (
-						<Ionicons
-							name={
-								active == NavigiationId.SETTING
-									? 'settings'
-									: 'settings-outline'
-							}
-							size={size}
-							color={color}
-						/>
-					)}
+					icon={({ color, size }) =>
+						CommonSetIcon({
+							isFocus: active == NavigiationId.SETTING,
+							iconName: 'settings',
+							size: size,
+							color: color,
+						})
+					}
 					label="Settings"
 					active={active == NavigiationId.SETTING}
 					onPress={() => {
