@@ -17,10 +17,17 @@ const CategoryNavigation = {
 	CATEGORY_EXPENSE: 'category_expense',
 };
 
+const TransactionNavigation = {
+	TRANSACTION_INCOME: 'transaction_income',
+	TRANSACTION_EXPENSE: 'transaction_expense',
+	TRANSACTION_TRANSFER: 'transaction_transfer',
+};
+
 const NavigationId = {
 	...RootNavigation,
 	...AccountNavigation,
 	...CategoryNavigation,
+	...TransactionNavigation,
 };
 
 export default NavigationId;
