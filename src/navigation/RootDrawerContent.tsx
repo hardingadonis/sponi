@@ -8,8 +8,10 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Avatar, Caption, Drawer, Text, Title } from 'react-native-paper';
 
+import NavigiationId from '@/navigation/NavigationId';
+
 const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
-	const [active, setActive] = useState('home');
+	const [active, setActive] = useState(NavigiationId.HOME);
 	const [appName, setAppName] = useState('');
 	const [appVersion, setAppVersion] = useState('');
 
@@ -37,76 +39,88 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
-							name={active == 'home' ? 'home' : 'home-outline'}
+							name={active == NavigiationId.HOME ? 'home' : 'home-outline'}
 							size={size}
 							color={color}
 						/>
 					)}
 					label="Home"
-					active={active == 'home'}
+					active={active == NavigiationId.HOME}
 					onPress={() => {
-						setActive('home');
-						navigation.navigate('HomeScreen');
+						setActive(NavigiationId.HOME);
+						navigation.navigate(NavigiationId.HOME);
 					}}
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
-							name={active == 'accounts' ? 'wallet' : 'wallet-outline'}
+							name={
+								active == NavigiationId.ACCOUNT ? 'wallet' : 'wallet-outline'
+							}
 							size={size}
 							color={color}
 						/>
 					)}
 					label="Accounts"
-					active={active == 'accounts'}
+					active={active == NavigiationId.ACCOUNT}
 					onPress={() => {
-						setActive('accounts');
-						navigation.navigate('AccountScreen');
+						setActive(NavigiationId.ACCOUNT);
+						navigation.navigate(NavigiationId.ACCOUNT);
 					}}
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
-							name={active == 'categories' ? 'pricetags' : 'pricetags-outline'}
+							name={
+								active == NavigiationId.CATEGORY
+									? 'pricetags'
+									: 'pricetags-outline'
+							}
 							size={size}
 							color={color}
 						/>
 					)}
 					label="Categories"
-					active={active == 'categories'}
+					active={active == NavigiationId.CATEGORY}
 					onPress={() => {
-						setActive('categories');
-						navigation.navigate('CategoryScreen');
+						setActive(NavigiationId.CATEGORY);
+						navigation.navigate(NavigiationId.CATEGORY);
 					}}
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
-							name={active == 'transactions' ? 'cash' : 'cash-outline'}
+							name={
+								active == NavigiationId.TRANSACTION ? 'cash' : 'cash-outline'
+							}
 							size={size}
 							color={color}
 						/>
 					)}
 					label="Transactions"
-					active={active == 'transactions'}
+					active={active == NavigiationId.TRANSACTION}
 					onPress={() => {
-						setActive('transactions');
-						navigation.navigate('TransactionScreen');
+						setActive(NavigiationId.TRANSACTION);
+						navigation.navigate(NavigiationId.TRANSACTION);
 					}}
 				/>
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
-							name={active == 'overview' ? 'bar-chart' : 'bar-chart-outline'}
+							name={
+								active == NavigiationId.OVERVIEW
+									? 'bar-chart'
+									: 'bar-chart-outline'
+							}
 							size={size}
 							color={color}
 						/>
 					)}
 					label="Overview"
-					active={active == 'overview'}
+					active={active == NavigiationId.OVERVIEW}
 					onPress={() => {
-						setActive('overview');
-						navigation.navigate('OverviewScreen');
+						setActive(NavigiationId.OVERVIEW);
+						navigation.navigate(NavigiationId.OVERVIEW);
 					}}
 				/>
 			</Drawer.Section>
@@ -114,16 +128,20 @@ const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
-							name={active == 'settings' ? 'settings' : 'settings-outline'}
+							name={
+								active == NavigiationId.SETTING
+									? 'settings'
+									: 'settings-outline'
+							}
 							size={size}
 							color={color}
 						/>
 					)}
 					label="Settings"
-					active={active == 'settings'}
+					active={active == NavigiationId.SETTING}
 					onPress={() => {
-						setActive('settings');
-						navigation.navigate('SettingScreen');
+						setActive(NavigiationId.SETTING);
+						navigation.navigate(NavigiationId.SETTING);
 					}}
 				/>
 			</Drawer.Section>

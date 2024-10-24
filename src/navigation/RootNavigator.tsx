@@ -1,5 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import NavigationId from '@/navigation/NavigationId';
 import RootDrawerContent from '@/navigation/RootDrawerContent';
 import AccountScreen from '@/screens/AccountScreen';
 import CategoryScreen from '@/screens/CategoryScreen';
@@ -18,32 +19,32 @@ const RootNavigator = () => {
 			screenOptions={{ title: 'false' }}
 		>
 			<RNDrawer.Screen
-				name="HomeScreen"
+				name={NavigationId.HOME}
 				component={HomeScreen}
 				options={{ title: 'Home' }}
 			/>
 			<RNDrawer.Screen
-				name="AccountScreen"
+				name={NavigationId.ACCOUNT}
 				component={AccountScreen}
 				options={{ title: 'Accounts' }}
 			/>
 			<RNDrawer.Screen
-				name="CategoryScreen"
+				name={NavigationId.CATEGORY}
 				component={CategoryScreen}
 				options={{ title: 'Categories' }}
 			/>
 			<RNDrawer.Screen
-				name="TransactionScreen"
+				name={NavigationId.TRANSACTION}
 				component={TransactionScreen}
 				options={{ title: 'Transactions' }}
 			/>
 			<RNDrawer.Screen
-				name="OverviewScreen"
+				name={NavigationId.OVERVIEW}
 				component={OverviewScreen}
 				options={{ title: 'Overview' }}
 			/>
 			<RNDrawer.Screen
-				name="SettingScreen"
+				name={NavigationId.SETTING}
 				component={SettingScreen}
 				options={{ title: 'Settings' }}
 			/>
