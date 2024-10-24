@@ -5,7 +5,7 @@ import AccountScreen from '@/screens/AccountScreen';
 import CategoryScreen from '@/screens/CategoryScreen';
 import HomeScreen from '@/screens/HomeScreen';
 import OverviewScreen from '@/screens/OverviewScreen';
-import SettingsScreen from '@/screens/SettingsScreen';
+import SettingScreen from '@/screens/SettingScreen';
 import TransactionScreen from '@/screens/TransactionScreen';
 
 const RNDrawer = createDrawerNavigator();
@@ -43,8 +43,8 @@ const RootNavigator = () => {
 				options={{ title: 'Overview' }}
 			/>
 			<RNDrawer.Screen
-				name="SettingsScreen"
-				component={SettingsScreen}
+				name="SettingScreen"
+				component={SettingScreen}
 				options={{ title: 'Settings' }}
 			/>
 		</RNDrawer.Navigator>

@@ -123,7 +123,7 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 					active={active == 'settings'}
 					onPress={() => {
 						setActive('settings');
-						navigation.navigate('SettingsScreen');
+						navigation.navigate('SettingScreen');
 					}}
 				/>
 			</Drawer.Section>

@@ -1,6 +1,6 @@
 import { SafeAreaView, Text, View } from 'react-native';
 
-const SettingsScreen = () => {
+const SettingScreen = () => {
 	return (
 		<SafeAreaView style={{ flex: 1 }}>
 			<View style={{ flex: 1 }}>
@@ -10,4 +10,4 @@ const SettingsScreen = () => {
 	);
 };
 
-export default SettingsScreen;
+export default SettingScreen;
