@@ -12,9 +12,15 @@ const AccountNavigation = {
 	ACCOUNT_BANK: 'account_bank',
 };
 
+const CategoryNavigation = {
+	CATEGORY_INCOME: 'category_income',
+	CATEGORY_EXPENSE: 'category_expense',
+};
+
 const NavigationId = {
 	...RootNavigation,
 	...AccountNavigation,
+	...CategoryNavigation,
 };
 
 export default NavigationId;
