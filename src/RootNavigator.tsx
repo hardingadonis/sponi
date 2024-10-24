@@ -15,13 +15,38 @@ const RootNavigator = () => {
 		<RNDrawer.Navigator
 			drawerContent={(props) => <DrawerContent {...props} />}
 			initialRouteName="HomeScreen"
+			screenOptions={{ title: 'false' }}
 		>
-			<RNDrawer.Screen name="HomeScreen" component={HomeScreen} />
-			<RNDrawer.Screen name="AccountScreen" component={AccountScreen} />
-			<RNDrawer.Screen name="CategoryScreen" component={CategoryScreen} />
-			<RNDrawer.Screen name="TransactionScreen" component={TransactionScreen} />
-			<RNDrawer.Screen name="OverviewScreen" component={OverviewScreen} />
-			<RNDrawer.Screen name="SettingsScreen" component={SettingsScreen} />
+			<RNDrawer.Screen
+				name="HomeScreen"
+				component={HomeScreen}
+				options={{ title: 'Home' }}
+			/>
+			<RNDrawer.Screen
+				name="AccountScreen"
+				component={AccountScreen}
+				options={{ title: 'Accounts' }}
+			/>
+			<RNDrawer.Screen
+				name="CategoryScreen"
+				component={CategoryScreen}
+				options={{ title: 'Categories' }}
+			/>
+			<RNDrawer.Screen
+				name="TransactionScreen"
+				component={TransactionScreen}
+				options={{ title: 'Transactions' }}
+			/>
+			<RNDrawer.Screen
+				name="OverviewScreen"
+				component={OverviewScreen}
+				options={{ title: 'Overview' }}
+			/>
+			<RNDrawer.Screen
+				name="SettingsScreen"
+				component={SettingsScreen}
+				options={{ title: 'Settings' }}
+			/>
 		</RNDrawer.Navigator>
 	);
 };
