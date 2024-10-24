@@ -39,4 +39,6 @@ const CommonBottomTabContent = ({
 	);
 };
 
-export default CommonBottomTabContent;
+export const setTabBar = (props: BottomTabBarProps) => {
+	return <CommonBottomTabContent {...props} />;
+};
