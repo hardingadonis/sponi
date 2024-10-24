@@ -1,12 +1,7 @@
-import { View } from 'react-native';
-import { Text } from 'react-native-paper';
+import TransactionNavigator from '@/navigation/transactions/TransactionNavigator';
 
 const TransactionScreen = () => {
-	return (
-		<View>
-			<Text>Transaction Screen</Text>
-		</View>
-	);
+	return <TransactionNavigator />;
 };
 
 export default TransactionScreen;
