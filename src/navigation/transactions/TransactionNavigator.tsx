@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
-import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
+import { setTabBar } from '@/navigation/common/CommonBottomTabContent';
 import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 import TransactionIncomeScreen from '@/screens/transactions/CategoryIncomeScreen';
 import TransactionExpenseScreen from '@/screens/transactions/TransactionExpenseScreen';
@@ -11,10 +11,7 @@ const RNTab = createBottomTabNavigator();
 
 const TransactionNavigator = () => {
 	return (
-		<RNTab.Navigator
-			screenOptions={{ headerShown: false }}
-			tabBar={(props) => <CommonBottomTabContent {...props} />}
-		>
+		<RNTab.Navigator screenOptions={{ headerShown: false }} tabBar={setTabBar}>
 			<RNTab.Screen
 				name={NavigationId.TRANSACTION_INCOME}
 				component={TransactionIncomeScreen}

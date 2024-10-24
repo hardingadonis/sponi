@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
-import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
+import { setTabBar } from '@/navigation/common/CommonBottomTabContent';
 import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 import CategoryExpenseScreen from '@/screens/categories/CategoryExpenseScreen';
 import CategoryIncomeScreen from '@/screens/categories/CategoryIncomeScreen';
@@ -10,10 +10,7 @@ const RNTab = createBottomTabNavigator();
 
 const CategoryNavigator = () => {
 	return (
-		<RNTab.Navigator
-			screenOptions={{ headerShown: false }}
-			tabBar={(props) => <CommonBottomTabContent {...props} />}
-		>
+		<RNTab.Navigator screenOptions={{ headerShown: false }} tabBar={setTabBar}>
 			<RNTab.Screen
 				name={NavigationId.CATEGORY_INCOME}
 				component={CategoryIncomeScreen}

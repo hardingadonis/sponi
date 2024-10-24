@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
-import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
+import { setTabBar } from '@/navigation/common/CommonBottomTabContent';
 import CommonSetIcon from '@/navigation/common/CommonSetIcon';
 import AccountBankScreen from '@/screens/accounts/AccountBankScreen';
 import AccountCashScreen from '@/screens/accounts/AccountCashScreen';
@@ -10,10 +10,7 @@ const RNTab = createBottomTabNavigator();
 
 const AccountNavigator = () => {
 	return (
-		<RNTab.Navigator
-			screenOptions={{ headerShown: false }}
-			tabBar={(props) => <CommonBottomTabContent {...props} />}
-		>
+		<RNTab.Navigator screenOptions={{ headerShown: false }} tabBar={setTabBar}>
 			<RNTab.Screen
 				name={NavigationId.ACCOUNT_CASH}
 				component={AccountCashScreen}
