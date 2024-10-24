@@ -1,4 +1,4 @@
-import RootNavigator from '@/RootNavigator';
+import RootNavigator from '@/navigation/RootNavigator';
 
 const Main = () => {
 	return <RootNavigator />;

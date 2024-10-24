@@ -1,6 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import DrawerContent from '@/navigation/DrawerContent';
+import RootDrawerContent from '@/navigation/RootDrawerContent';
 import AccountScreen from '@/screens/AccountScreen';
 import CategoryScreen from '@/screens/CategoryScreen';
 import HomeScreen from '@/screens/HomeScreen';
@@ -13,7 +13,7 @@ const RNDrawer = createDrawerNavigator();
 const RootNavigator = () => {
 	return (
 		<RNDrawer.Navigator
-			drawerContent={(props) => <DrawerContent {...props} />}
+			drawerContent={(props) => <RootDrawerContent {...props} />}
 			initialRouteName="HomeScreen"
 			screenOptions={{ title: 'false' }}
 		>

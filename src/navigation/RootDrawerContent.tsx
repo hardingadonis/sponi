@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Avatar, Caption, Drawer, Text, Title } from 'react-native-paper';
 
-const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
+const RootDrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 	const [active, setActive] = useState('home');
 	const [appName, setAppName] = useState('');
 	const [appVersion, setAppVersion] = useState('');
@@ -155,4 +155,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default DrawerContent;
+export default RootDrawerContent;
