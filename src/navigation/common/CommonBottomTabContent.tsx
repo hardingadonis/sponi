@@ -1,7 +1,7 @@
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { BottomNavigation } from 'react-native-paper';
 
-const AccountBottomTabContent = ({
+const CommonBottomTabContent = ({
 	navigation,
 	state,
 	descriptors,
@@ -39,4 +39,4 @@ const AccountBottomTabContent = ({
 	);
 };
 
-export default AccountBottomTabContent;
+export default CommonBottomTabContent;

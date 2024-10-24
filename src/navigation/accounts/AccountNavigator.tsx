@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import NavigationId from '@/navigation/NavigationId';
-import AccountBottomTabContent from '@/navigation/accounts/AccountBottomTabContent';
+import CommonBottomTabContent from '@/navigation/common/CommonBottomTabContent';
 import AccountBankScreen from '@/screens/accounts/AccountBankScreen';
 import AccountCashScreen from '@/screens/accounts/AccountCashScreen';
 
@@ -12,7 +12,7 @@ const AccountNavigator = () => {
 	return (
 		<RNTab.Navigator
 			screenOptions={{ headerShown: false }}
-			tabBar={(props) => <AccountBottomTabContent {...props} />}
+			tabBar={(props) => <CommonBottomTabContent {...props} />}
 		>
 			<RNTab.Screen
 				name={NavigationId.ACCOUNT_CASH}
