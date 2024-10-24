@@ -6,7 +6,7 @@ import {
 import * as Application from 'expo-application';
 import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Avatar, Drawer, Text, Title } from 'react-native-paper';
+import { Avatar, Caption, Drawer, Text, Title } from 'react-native-paper';
 
 const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 	const [active, setActive] = useState('home');
@@ -30,7 +30,10 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 				<Avatar.Image source={require('@/assets/images/icon.png')} size={50} />
 				<Title style={styles.titleText}>sponi</Title>
 			</View>
-			<Drawer.Section style={styles.drawerSection}>
+			<Caption style={styles.sloganText}>
+				Keeping your money is our pleasure!
+			</Caption>
+			<Drawer.Section>
 				<Drawer.Item
 					icon={({ color, size }) => (
 						<Ionicons
@@ -145,9 +148,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		marginLeft: 12,
 	},
-	drawerSection: {
-		marginTop: 15,
-	},
+	sloganText: { marginTop: 7, marginLeft: 15, marginBottom: 10 },
 	annotation: {
 		marginHorizontal: 24,
 		marginVertical: 6,
